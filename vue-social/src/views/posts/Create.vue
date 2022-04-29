@@ -1,20 +1,35 @@
 <template>
-  <div class="post-container">
-    <h2>New Post</h2>
-    <hr>
-    <form @submit="onSubmit">
-      <v-text-field name="title" v-model="title" label="Title"></v-text-field>
-      <v-textarea name="content" v-model="content"
-          label="Content"
-          color="teal"
-      >
-      </v-textarea>
-      <v-btn
-          elevation="2" type="submit"
-      >Post</v-btn>
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-2">New Post</h2>
+        <hr>
 
-    </form>
-  </div>
+        <form @submit="onSubmit">
+          <div class="field">
+            <label class="label">Title</label>
+            <div class="control">
+              <input class="input" name="title" v-model="title" type="text" placeholder="Text input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Content</label>
+            <div class="control">
+              <textarea class="textarea" name="content" v-model="content"></textarea>
+
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-black" type="submit">Post</button>
+
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+    </section>
+
 
 </template>
 <script>
@@ -41,8 +56,7 @@ export default {
         content: this.content,
       };
       this.createPost(newPost);
-      this.title = '';
-      this.content = '';
+
     },
     async createPost(content) {
       const res = await fetch('/api/posts', {
@@ -53,6 +67,9 @@ export default {
         body: JSON.stringify(content)
       })
       const data = await res.json()
+      this.title = '';
+      this.content = '';
+      window.location.href = '/';
     },
 
 

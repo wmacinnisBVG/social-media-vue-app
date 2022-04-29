@@ -1,18 +1,36 @@
 <template>
+
   <div  :key="post.id" v-for="post in posts">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          {{ post.title }}
-        </p>
-      </header>
-      <div class="card-content">
+    <br>
+    <article class="media card">
+      <div class="media-content card-content">
         <div class="content">
-          <p>{{ post.content }}</p>
+          <h6 class="is-3 title">{{ post.title }}</h6>
+          <p>
+            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+            <br><br>
+         {{ post.content }}
+
+          </p>
         </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <a class="level-item">
+              <span class="icon is-small"><i class="fas fa-reply"></i></span>
+            </a>
+            <a class="level-item">
+              <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+            </a>
+            <a class="level-item">
+              <span class="icon is-small"><i class="fas fa-heart"></i></span>
+            </a>
+          </div>
+        </nav>
       </div>
-    </div>
+    </article>
+    <br>
   </div>
+
 </template>
 <script>
 export default {

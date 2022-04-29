@@ -5,6 +5,16 @@
       "title": "json-server",
       "author": "typicode",
       "content": "lorem ipsum"
+    },
+    {
+      "title": "Hello",
+      "content": "Hello World!",
+      "id": 2
+    },
+    {
+      "title": "New Post",
+      "content": "Hello!",
+      "id": 3
     }
   ]
 }
