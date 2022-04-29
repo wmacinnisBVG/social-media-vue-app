@@ -1,6 +1,17 @@
 <template>
   <div  :key="post.id" v-for="post in posts">
-  <p>{{ post.id }}}</p>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          {{ post.title }}
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>{{ post.content }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
