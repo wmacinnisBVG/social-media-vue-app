@@ -1,20 +1,18 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode",
-      "content": "lorem ipsum"
-    },
+      "title": "test",
+      "content": "test123",
+      "author": "will",
+      "id": 1
+    }
+  ],
+  "users": [
     {
-      "title": "Hello",
-      "content": "Hello World!",
-      "id": 2
-    },
-    {
-      "title": "New Post",
-      "content": "Hello!",
-      "id": 3
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "$2a$10$HtnugB1x318yOD68x4B8E.ebxorxfjeqWBny3q57fxtJqD1IT9dTq",
+      "id": 1
     }
   ]
 }

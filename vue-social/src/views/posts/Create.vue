@@ -38,7 +38,8 @@ export default {
   data(){
     return {
       title: '',
-      content : ''
+      content : '',
+      author: ''
     }
   },
   components: {
@@ -51,9 +52,11 @@ export default {
         alert('Please add some content')
         return
       }
+      const user = sessionStorage.getItem("username")
       const newPost = {
         title: this.title,
         content: this.content,
+        author: user
       };
       this.createPost(newPost);
 

@@ -17,6 +17,11 @@ const routes = [
     path: '/posts/create',
     name: 'create_post',
     component: ()=>import('@/views/posts/Create.vue')
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: ()=>import('@/views/Signup.vue')
   }
 ];
 
@@ -26,15 +31,11 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, from) => {
-  if (
-      // make sure the user is authenticated
-      sessionStorage.getItem("username") == null &&
-      // ❗️ Avoid an infinite redirect
-      to.path !== '/login'
-  ) {
+   if (to.path == '/' && sessionStorage.getItem("username") == null && to.path !== '/login') {
     // redirect the user to the login page
     return { path: '/login' }
   }
+
 })
 
 export default router

@@ -7,7 +7,7 @@
         <div class="content">
           <h6 class="is-3 title">{{ post.title }}</h6>
           <p>
-            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+            <small>@{{ post.author }}</small> <small>31m</small>
             <br><br>
          {{ post.content }}
 

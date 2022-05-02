@@ -6,7 +6,7 @@
       <div class="field">
         <label class="label">Email</label>
         <div class="control">
-          <input class="input" v-model="email" name="email" type="text">
+          <input class="input" v-model="email" name="email" type="email">
         </div>
       </div>
       <div class="field">
@@ -17,7 +17,8 @@
       </div>
       <div class="field">
         <div class="control">
-          <button @click="login()" class="button is-link">Login</button>
+          <button @click="login()" class="button is-link">Login</button>&nbsp;&nbsp;
+          <router-link to="/signup" class="button is-dark">Signup</router-link>
         </div>
       </div>
 
@@ -36,7 +37,7 @@ export default {
   methods: {
     login() {
       console.log(this.email, this.password);
-      sessionStorage.setItem("username", "userId");
+      sessionStorage.setItem("username", this.email);
       console.log(sessionStorage.getItem("username"));
       window.location.href = '/';
 
