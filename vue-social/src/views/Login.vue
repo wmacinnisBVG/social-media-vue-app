@@ -8,7 +8,6 @@
             <p>The internet's biggest collection of dad jokes.</p>
             <br>
             <img src="https://media1.giphy.com/media/VM01S5yIaKCgqg1bSF/giphy.gif">
-
           </div>
           <br>
           <br>
@@ -53,19 +52,16 @@
           <a href="https://www.basspro.com/shop/en" target="_blank">
           <img src="https://dynl.mktgcdn.com/p/qY7eNNADJ4eZYP01saMISG_0djUHzFxqNhyqL9uSIRo/1900x475.jpg">
           </a>
-
         </div>
-
       </div>
-
-
-
-
     </div>
   </section>
 </template>
 
 <script>
+/**
+ * Import bcrypt for password hashing
+ */
 import bcrypt from 'bcryptjs'
 export default {
   data() {
@@ -78,38 +74,42 @@ export default {
     };
   },
   methods: {
+    /**
+     * Fetch all users from db
+     * @returns {Promise<Response<any, Record<string, any>, number>>}
+     */
     async fetchUsers() {
       const res = await fetch('api/users')
       const data = await res.json()
       return data
     },
+    /**
+     * Attempts to log user into site
+     */
     login() {
       const email = this.email;
+      //Checks if user exists in db
       if(this.users.some(user => user.email === this.email)){
+        //finds index of user in db array
         const user_index = this.users.findIndex(user => user.email === this.email)
+        //Checks the plaintext password against hash in the db
         bcrypt.compare(this.password, this.users[user_index].password, function(err, result) {
           if (result) {
+            //If passwords match
             sessionStorage.setItem("username", email);
             window.location.href = '/';
           }
           else {
+            //If passwords do not match
             this.error = true
             this.error_msg = "Invalid username or password."
           }
         });
-
-
       } else {
+        //If email is not found in db
         this.error = true
-        this.error_msg = "Please fill all required fields."
-
+        this.error_msg = "Invalid username or password."
       }
-
-
-
-
-
-
     },
   },
   async created() {

@@ -3,7 +3,6 @@
       <div class="container">
         <h2 class="title is-2">New Post</h2>
         <hr>
-
         <form @submit="onSubmit">
           <div class="field">
             <label class="label">Joke Set-Up</label>
@@ -15,7 +14,6 @@
             <label class="label">Punchline</label>
             <div class="control">
               <textarea class="textarea" name="content" v-model="content"></textarea>
-
             </div>
           </div>
           <div class="field">
@@ -24,13 +22,9 @@
 
             </div>
           </div>
-
-
         </form>
       </div>
     </section>
-
-
 </template>
 <script>
 export default {
@@ -42,10 +36,11 @@ export default {
       author: ''
     }
   },
-  components: {
-
-  },
   methods: {
+    /**
+     * On submission of joke form build post for db
+     * @param e
+     */
     onSubmit(e) {
       e.preventDefault()
       if(!this.content){
@@ -59,8 +54,12 @@ export default {
         author: user
       };
       this.createPost(newPost);
-
     },
+    /**
+     * Submit post to db
+     * @param content
+     * @returns {Promise<void>}
+     */
     async createPost(content) {
       const res = await fetch('/api/posts', {
         method: 'POST',
@@ -74,8 +73,6 @@ export default {
       this.content = '';
       window.location.href = '/';
     },
-
-
   }
 }
 </script>

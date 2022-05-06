@@ -35,7 +35,12 @@ export default {
   name: 'Posts',
   components: {},
   methods: {
-
+    /**
+     * Used when a user wants to laugh at another users post
+     * Gets current laughs count from db and sends a PATCH request
+     * @param author
+     * @returns {Promise<void>}
+     */
     async laugh(author) {
       const profile =  await this.fetchLaughs(author)
       const newLikes = profile[0].laughs+1
@@ -54,30 +59,26 @@ export default {
         window.location.reload()
       }
     },
+    /**
+     * Fetches the amount of laughs the user has
+     * @param user
+     * @returns {Promise<Response<any, Record<string, any>, number>>}
+     */
     async fetchLaughs(user) {
       const res = await fetch(`api/users?email=${user}`)
       const data = await res.json()
       console.log(data)
       return data
     },
+    /**
+     * Fetches all recent posts
+     * @returns {Promise<Response<any, Record<string, any>, number>>}
+     */
     async fetchPosts() {
       const res = await fetch(`api/posts`)
       const data = await res.json()
       return data
     },
-  /**
-    async deleteContact(id) {
-      if (confirm('Are you sure?')) {
-        const res = await fetch(`api/contacts/${id}`, {
-          method: 'DELETE',
-
-        })
-        res.status === 200 ? (this.tasks = this.tasks.filter((task) => task.id !== id)) : alert('Error deleting task')
-
-
-      }
-    }
-    */
   },
   async created() {
     this.posts = await this.fetchPosts()
