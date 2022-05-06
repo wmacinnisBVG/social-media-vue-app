@@ -1,58 +1,62 @@
 {
   "posts": [
     {
-      "title": "test",
-      "content": "test123",
-      "author": "will",
+      "title": "What do you call a factory that makes okay products?",
+      "content": "A satisfactory.",
+      "author": "joe@gmail.com",
       "id": 1
     },
     {
-      "title": "Test",
-      "content": "Test",
-      "author": "will@gmail.com",
+      "title": "What did the ocean say to the beach?",
+      "content": "Nothing, it just waved.",
+      "author": "joe@gmail.com",
       "id": 2
+    },
+    {
+      "title": "I only know 25 letters of the alphabet.",
+      "content": "I don't know y.",
+      "author": "joe@gmail.com",
+      "id": 3
+    },
+    {
+      "title": "How does the moon cut his hair?",
+      "content": "Eclipse it.",
+      "author": "joe@gmail.com",
+      "id": 4
+    },
+    {
+      "title": "Where do fruits go on vacation?",
+      "content": "Pear-is!",
+      "author": "dave@hotmail.com",
+      "id": 5
+    },
+    {
+      "title": "I asked my dog what's two minus two.",
+      "content": "He said nothing.",
+      "author": "dave@hotmail.com",
+      "id": 6
     }
   ],
   "users": [
     {
-      "name": "test",
-      "email": "test@gmail.com",
-      "laughs": 0,
-      "password": "$2a$10$HtnugB1x318yOD68x4B8E.ebxorxfjeqWBny3q57fxtJqD1IT9dTq",
+      "name": "Joe",
+      "email": "joe@gmail.com",
+      "laughs": 1,
+      "password": "$2a$10$tNDtMSNAB5diDMbSvIRZ1O7eeUY/iU7W4LXbYwlpctCPBAP.KwJDy",
       "id": 1
     },
     {
-      "name": "Test",
-      "email": "test@gmail.com",
-      "laughs": 0,
-      "password": "$2a$10$o3nKJpflNfzTVrTcghWdkOy.nWPCyNHsBgZOfc.OsUeBHNhGcPIR.",
+      "name": "David",
+      "email": "dave@hotmail.com",
+      "laughs": 1,
+      "password": "$2a$10$a2Bh6j.onFveHEps.kG4X.UGzg5inHic3apPSsPaXXJjJNHa3DynC",
       "id": 2
-    },
-    {
-      "name": "William MacInnis",
-      "email": "will@gmail.com",
-      "laughs": 7,
-      "id": 3
-    },
-    {
-      "name": "Test User",
-      "email": "test@test.com",
-      "laughs": 0,
-      "password": "$2a$10$WsLkYbZmPYXfyyc4eQ9q9e3xzoeSDQxVppAPg8Ok8N5.BQf.qGJvq",
-      "id": 4
-    },
-    {
-      "name": "Test",
-      "email": "test@gmail.com",
-      "laughs": 0,
-      "password": "$2a$10$tU95dObc/CQFQ2t8o9Ne0uw2qOFzJ6aECyg//xR6/vcAzIPtAZGIe",
-      "id": 5
     }
   ],
   "followers": [
     {
-      "user_profile": "will@gmail.com",
-      "user_follower": "test@test.com",
+      "user_profile": "joe@gmail.com",
+      "user_follower": "dave@hotmail.com",
       "id": 1
     }
   ]
