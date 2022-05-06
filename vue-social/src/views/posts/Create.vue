@@ -6,13 +6,13 @@
 
         <form @submit="onSubmit">
           <div class="field">
-            <label class="label">Title</label>
+            <label class="label">Joke Set-Up</label>
             <div class="control">
-              <input class="input" name="title" v-model="title" type="text" placeholder="Text input">
+              <input class="input" name="title" v-model="title" type="text" placeholder="">
             </div>
           </div>
           <div class="field">
-            <label class="label">Content</label>
+            <label class="label">Punchline</label>
             <div class="control">
               <textarea class="textarea" name="content" v-model="content"></textarea>
 

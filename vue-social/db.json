@@ -5,13 +5,54 @@
       "content": "test123",
       "author": "will",
       "id": 1
+    },
+    {
+      "title": "Test",
+      "content": "Test",
+      "author": "will@gmail.com",
+      "id": 2
     }
   ],
   "users": [
     {
       "name": "test",
       "email": "test@gmail.com",
+      "laughs": 0,
       "password": "$2a$10$HtnugB1x318yOD68x4B8E.ebxorxfjeqWBny3q57fxtJqD1IT9dTq",
+      "id": 1
+    },
+    {
+      "name": "Test",
+      "email": "test@gmail.com",
+      "laughs": 0,
+      "password": "$2a$10$o3nKJpflNfzTVrTcghWdkOy.nWPCyNHsBgZOfc.OsUeBHNhGcPIR.",
+      "id": 2
+    },
+    {
+      "name": "William MacInnis",
+      "email": "will@gmail.com",
+      "laughs": 6,
+      "id": 3
+    },
+    {
+      "name": "Test User",
+      "email": "test@test.com",
+      "laughs": 0,
+      "password": "$2a$10$WsLkYbZmPYXfyyc4eQ9q9e3xzoeSDQxVppAPg8Ok8N5.BQf.qGJvq",
+      "id": 4
+    },
+    {
+      "name": "Test",
+      "email": "test@gmail.com",
+      "laughs": 0,
+      "password": "$2a$10$tU95dObc/CQFQ2t8o9Ne0uw2qOFzJ6aECyg//xR6/vcAzIPtAZGIe",
+      "id": 5
+    }
+  ],
+  "followers": [
+    {
+      "user_profile": "will@gmail.com",
+      "user_follower": "test@test.com",
       "id": 1
     }
   ]

@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="title is-2">Latest Posts</h2>
+      <h2 class="title is-2">Latest Dad Jokes</h2>
       <hr>
       <Posts />
     </div>

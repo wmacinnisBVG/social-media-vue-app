@@ -66,6 +66,7 @@ export default {
           const new_user = {
             name: this.name,
             email: this.email,
+            laughs: 0,
             password: this.encryptPassword(this.password)
           }
           this.create_user(new_user)
@@ -92,7 +93,8 @@ export default {
         body: JSON.stringify(user)
       })
       const data = await res.json()
-
+      sessionStorage.setItem("username", this.email);
+      window.location.href = '/';
     },
   },
 };
